@@ -1,0 +1,104 @@
+*{
+  margin: 0;
+  padding: 0;box-sizing: border-box;
+  list-style: none;
+}
+
+.screen{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab{
+  width: 60%;
+  margin: 2rem auto;
+  border: 1px solid lightgray;
+  border-radius: 0.5rem;
+}
+
+.tab-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.tab-header div{
+  width: 40%;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  position: relative;
+}
+
+.tab-header div:first-child{
+  justify-content: start;
+}
+
+.tab-header div:nth-child(2){
+  justify-content: center;
+  /* text-align: center; */
+}
+
+.tab-header div:last-child{
+  justify-content: end;
+  /* text-align: end; */
+}
+
+.active:first-child:before{
+  content: "";
+  width: 15%;
+  border-bottom: 2px solid blue;
+  position: absolute;
+  bottom: 0;
+}
+
+.active:nth-child(2):before{
+  content: "";
+  width: 15%;
+  border-bottom: 2px solid blue;
+  position: absolute;
+  bottom: 0;
+}
+
+.active:last-child:before{
+  content: "";
+  width: 15%;
+  border-bottom: 2px solid blue;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.active button{
+  color: blue;
+}
+
+.tab-header div button{
+  border: 0;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.tab-content{
+  height: 60px;
+  font-size: 20px;
+  text-align: center;
+  color: gray;
+}
+
+.close{
+  padding: 0.5rem 2.5rem;
+  font-size: 18px;
+  border: 0;
+  background-color: rgb(238, 67, 101);
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.closed{
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+}
